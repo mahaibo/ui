@@ -1,6 +1,7 @@
 
 local MainScene = class("MainScene", cc.load("mvc").ViewBase)
 local PopuView = import("..ui.PopuView")
+local Layer3D = import("..ui.Layer3D")
 
 function MainScene:onCreate()
     -- add background image
@@ -12,8 +13,11 @@ function MainScene:onCreate()
     local playButton = cc.MenuItemImage:create("PlayButton.png", "PlayButton.png")
         :onClicked(function()
             -- self:getApp():enterScene("PlayScene")
-            local popuView = PopuView:create()
-            self:addChild(popuView)
+            print("PopuView:create")
+            PopuView:create()
+            
+            -- local layer3D = Layer3D:create()
+            -- self:addChild(layer3D)
         end)
     cc.Menu:create(playButton)
         :move(display.cx, display.cy - 200)

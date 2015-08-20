@@ -9,6 +9,7 @@ local PopuView = class("PopuView",function( ... )
 end)
 
 function PopuView:ctor( params )
+	print("PopuView:ctor")
 	self.layerbg_ = cc.LayerColor:create(cc.c4b(255, 255, 255, 184), 200, 200)
 	self.layerbgWidth_ = self.layerbg_:getContentSize().width
 	self.layerBgHeight_ = self.layerbg_:getContentSize().height
@@ -37,6 +38,8 @@ function PopuView:showAnimation( ... )
 	local sequence =  cc.Sequence:create(actions)
 	-- run action
 	self.layerbg_:runAction(sequence)
+	-- self.layerbg_:setScale(0)
+ --    self.layerbg_:runAction(cc.EaseBackOut:create(cc.ScaleTo:create(0.5,1)));
 
 end
 

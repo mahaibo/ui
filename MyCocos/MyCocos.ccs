@@ -1,0 +1,39 @@
+<Solution>
+  <PropertyGroup Name="MyCocos" Version="2.3.1.2" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Project Name="MainScene.csd" Type="Scene" />
+        <Image Name="HelloWorld.png" />
+        <Project Name="AccelerometerScene.csd" Type="Scene" />
+        <Image Name="animated-grossini.png" />
+        <Image Name="btn-a-0.png" />
+        <Image Name="btn-a-1.png" />
+        <Image Name="btn-a-2.png" />
+        <Image Name="btn-b-0.png" />
+        <Image Name="btn-b-1.png" />
+        <Image Name="btn-b-2.png" />
+        <Image Name="btn-back-0.png" />
+        <Image Name="btn-back-1.png" />
+        <Image Name="btn-test-0.png" />
+        <Image Name="btn-test-1.png" />
+        <Image Name="btn-test-2.png" />
+        <Image Name="burst.png" />
+        <Image Name="ccbParticleStars.png" />
+        <Image Name="flower.jpg" />
+        <Image Name="grossini-generic.png" />
+        <Image Name="jungle-left.png" />
+        <Image Name="jungle-right.png" />
+        <Image Name="jungle.png" />
+        <Image Name="logo-icon.png" />
+        <Image Name="logo.png" />
+        <Image Name="markerfelt24shadow.png" />
+        <Image Name="particle-fire.png" />
+        <Image Name="particle-smoke.png" />
+        <Image Name="particle-snow.png" />
+        <Image Name="particle-stars.png" />
+        <Image Name="scale-9-demo.png" />
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>
