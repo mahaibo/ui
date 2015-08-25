@@ -12,9 +12,9 @@ function MainScene:onCreate()
     -- add play button
     local playButton = cc.MenuItemImage:create("PlayButton.png", "PlayButton.png")
         :onClicked(function()
-            -- self:getApp():enterScene("PlayScene")
-            print("PopuView:create")
-            PopuView:create()
+            self:getApp():enterScene("PlayScene")
+            -- print("PopuView:create")
+            -- PopuView:create()
             
             -- local layer3D = Layer3D:create()
             -- self:addChild(layer3D)

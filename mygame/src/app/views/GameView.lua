@@ -30,6 +30,7 @@ GameView.events = {
 }
 
 function GameView:start()
+    
     self:scheduleUpdate(handler(self, self.step))
     return self
 end
@@ -41,6 +42,8 @@ end
 
 function GameView:step(dt)
     if self.lives_ <= 0 then return end
+
+    
 
     self.addBugInterval_ = self.addBugInterval_ - dt
     if self.addBugInterval_ <= 0 then
@@ -64,6 +67,10 @@ end
 
 function GameView:getKills()
     return self.kills_
+end
+
+function GameView:getScore( ... )
+    return self.score_
 end
 
 function GameView:addBug()
@@ -119,11 +126,19 @@ function GameView:bugDead(bug)
     self.kills_ = self.kills_ + 1
     audio.playSound("BugDead.wav")
 
+    self:updateScore()
+
     return self
+end
+
+function GameView:updateScore( ... )
+    self.score_ = self.score_ + 1
+    self.scoreLabel_:setString(self.score_.."分")
 end
 
 function GameView:onCreate()
     self.lives_ = GameView.INIT_LIVES
+    self.score_ = 0
     self.kills_ = 0
     self.bugs_ = {}
     self.addBugInterval_ = 0
@@ -147,6 +162,10 @@ function GameView:onCreate()
         :addTo(self)
     self.livesLabel_ = cc.Label:createWithSystemFont(self.lives_, "Arial", 32)
         :move(display.left + 90, display.top - 50)
+        :addTo(self)
+
+    self.scoreLabel_ = cc.Label:createWithSystemFont(self.score_, "Arial", 32)
+        :move(display.right - 90, display.top - 50)
         :addTo(self)
 
     -- create animation for bugs

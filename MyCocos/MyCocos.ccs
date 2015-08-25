@@ -33,6 +33,7 @@
         <Image Name="particle-snow.png" />
         <Image Name="particle-stars.png" />
         <Image Name="scale-9-demo.png" />
+        <Project Name="AcceleroLayer.csd" Type="Layer" />
       </RootFolder>
     </Group>
   </SolutionFolder>
